@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "self-programming-engine"
+version = "0.1.0"
+description = "Autonomous multi-agent code self-evolution and self-programming engine (Architect -> Programmer -> Patcher -> Tester -> Reviewer)"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [
+    { name = "Wei Zhang" }
+]
+keywords = [
+    "ai",
+    "agents",
+    "self-programming",
+    "code-generation",
+    "autonomous-coding",
+    "git-sandbox",
+    "ast-patching"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Code Generators",
+]
+dependencies = [
+    "pydantic>=2.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0"
+]
+
+[tool.setuptools.packages.find]
+include = ["self_programming*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
